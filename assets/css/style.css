@@ -472,6 +472,24 @@ body {
   right: 22px;
 }
 
+.c-title {
+  text-align: center;
+  color: #391E88;
+}
+.c-title--main {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 43px;
+  letter-spacing: 2%;
+  margin-bottom: 5px;
+}
+.c-title--sub {
+  font-size: 0.8666666667rem;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 5%;
+}
+
 .p-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,11 +648,17 @@ body {
 .p-keyVisual__title--main {
   font-size: 4.8rem;
   font-weight: bold;
-  line-height: 4.8rem;
+  line-height: 72px;
   letter-spacing: 5%;
   color: #FFF;
   text-shadow: 0 0 2.5px rgba(185, 117, 201, 0.9);
   margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .p-keyVisual__title--main {
+    font-size: 2.6666666667rem;
+    line-height: 44px;
+  }
 }
 .p-keyVisual__title--sub {
   font-size: 1.6rem;
@@ -648,6 +672,80 @@ body {
 @media screen and (max-width: 768px) {
   .p-keyVisual__title--sub {
     margin-bottom: 30px;
+  }
+}
+
+.p-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 849px;
+  margin: 70px auto 0;
+}
+@media screen and (max-width: 992px) {
+  .p-news {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.p-news__title {
+  text-align: left;
+}
+@media screen and (max-width: 992px) {
+  .p-news__title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  .p-news__wrapper {
+    padding: 0 15px;
+  }
+}
+.p-news__wrapper--item {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 992px) {
+  .p-news__wrapper--item {
+    margin: 30px 0 0 0;
+  }
+}
+.p-news__wrapper--item:last-child {
+  margin-bottom: 0;
+}
+.p-news__wrapper--item .p-news__time {
+  font-size: 0.9333333333rem;
+  line-height: 25px;
+  letter-spacing: 10%;
+  margin-right: 20px;
+}
+.p-news__wrapper--item .p-news__label {
+  display: inline-block;
+  width: 80px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 5%;
+  text-align: center;
+  background-color: #CCC;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.p-news__wrapper--item .p-news__text {
+  display: inline-block;
+  font-size: 0.9333333333rem;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 5%;
+}
+@media screen and (max-width: 992px) {
+  .p-news__wrapper--item .p-news__text {
+    display: block;
   }
 }
 

@@ -1,0 +1,73 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/functions" as *;
+@use "../../foundation/variables" as *;
+
+.p-news {
+    @include flex-space-between;
+    max-width: 849px;
+    margin: 70px auto 0;
+
+    @include media(lg) {
+        flex-direction: column;
+    }
+
+    &__title {
+        text-align: left;
+
+        @include media(lg) {
+            text-align: center;
+        }
+    }
+
+    &__wrapper {
+        @include media(lg) {
+            padding: 0 15px;
+        }
+
+        &--item {
+            // display: flex;
+            margin-bottom: 15px;
+
+            @include media(lg) {
+                margin: 30px 0 0 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .p-news__time {
+                font-size: rem(14px);
+                line-height: 25px;
+                letter-spacing: 10%;
+                margin-right: 20px;
+            }
+
+            .p-news__label {
+                display: inline-block;
+                width: 80px;
+                height: 26px;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 26px;
+                letter-spacing: 5%;
+                text-align: center;
+                background-color: $bg-color-secondary;
+                border-radius: 20px;
+                margin-right: 20px;
+            }
+
+            .p-news__text {
+                display: inline-block;
+                font-size: rem(14px);
+                font-weight: 300;
+                line-height: 25px;
+                letter-spacing: 5%;
+
+                @include media(lg) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

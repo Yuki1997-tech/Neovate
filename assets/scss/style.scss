@@ -12,10 +12,12 @@
 
 // object/component
 @use "./object/component/button";
+@use "./object/component/title";
 
 // object/project
 @use "./object/project/header";
 @use "./object/project/keyVisual";
+@use "./object/project/news";
 
 // object/utility
 @use "./object/utility/lineBreak";
