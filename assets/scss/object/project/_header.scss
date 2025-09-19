@@ -1,0 +1,144 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/functions" as *;
+@use "../../foundation/variables" as *;
+
+.p-header {
+    @include flex-space-between;
+    align-items: center;
+    width: 100%;
+    height: 86px;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: background-color 0.6s ease;
+
+    &__title--image {
+        width: 160px;
+    }
+
+    .p-nav__list {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        &--link {
+            font-size: rem(14px);
+            font-weight: bold;
+            line-height: rem(25px);
+            letter-spacing: 5%;
+            color: $site-color-secondary;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 0%;
+                background: $site-color-secondary;
+                border-radius: 8px;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                transition: all 0.3s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// header animation
+.p-header.scrolled {
+    background-color: $header-scroll-color;
+}
+
+// header burger-menu
+.p-nav {
+    @include media(lg) {
+        display: grid;
+        place-content: center;
+        background: $gradient-color;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        z-index: 3;
+        transition: all 0.6s ease;
+    }
+
+    .open & {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__list {
+        @include media(lg) {
+            flex-direction: column;
+        }
+
+        &--link {
+            font-size: rem(16px);
+        }
+    }
+}
+
+// toggle__button
+.c-toggle__button {
+    display: none;
+
+    @include media(lg) {
+        display: block;
+        width: 30px;
+        height: 20px;
+        z-index: 4;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &--line {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $site-color-secondary;
+        border-radius: 8px;
+        position: absolute;
+        left: 0;
+        transition: all 0.6s ease;
+
+        &:nth-child(1) {
+            top: 0;
+
+            .open & {
+                top: calc(50% - 2px);
+                transform: rotate(-315deg);
+            }
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+
+            .open & {
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+
+            .open & {
+                bottom: 50%;
+                transform: rotate(315deg);
+            }
+        }
+    }
+}
