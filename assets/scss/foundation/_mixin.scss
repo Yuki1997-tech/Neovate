@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+// flex
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+// mediaQuery
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

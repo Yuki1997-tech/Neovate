@@ -1,0 +1,18 @@
+// color
+$font-color: #333;
+$site-color-primary: #391E88;
+$site-color-secondary: #FFF;
+$gradient-color: linear-gradient(#250D65, #7633A4);
+$bg-color-primary: #F5F5F5;
+$header-scroll-color: #21054D;
+
+// size
+$base-font-size: 15px;
+
+// breakpoints
+$breakpoints: (
+    'sm': 'screen and (max-width: 576px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 992px)',
+    'xl': 'screen and (max-width: 1200px)',
+    ) !default;
