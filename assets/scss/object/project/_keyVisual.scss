@@ -14,11 +14,16 @@
     &__title--main {
         font-size: rem(72px);
         font-weight: bold;
-        line-height: rem(72px);
+        line-height: 72px;
         letter-spacing: 5%;
         color: $site-color-secondary;
         text-shadow: 0 0 2.5px rgba($color: #B975C9, $alpha: 0.9);
         margin-bottom: 20px;
+
+        @include media(md) {
+            font-size: rem(40px);
+            line-height: 44px;
+        }
     }
 
     &__title--sub {

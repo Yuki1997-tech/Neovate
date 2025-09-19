@@ -1,0 +1,22 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/functions" as *;
+
+.c-title {
+    text-align: center;
+    color: $site-color-primary;
+
+    &--main {
+        font-size: rem(36px);
+        font-weight: bold;
+        line-height: 43px;
+        letter-spacing: 2%;
+        margin-bottom: 5px;
+    }
+
+    &--sub {
+        font-size: rem(13px);
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 5%;
+    }
+}

@@ -6,6 +6,12 @@
     justify-content: space-between;
 }
 
+// grid
+@mixin grid-center {
+    display: grid;
+    place-items: center
+}
+
 // mediaQuery
 @mixin media($breakpoint) {
     @media #{map-get($breakpoints, $breakpoint)} {
