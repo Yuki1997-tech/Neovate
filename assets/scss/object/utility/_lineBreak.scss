@@ -1,0 +1,8 @@
+@use "../../foundation/mixin" as *;
+
+.u-lineBreak--md::before {
+    @include media(md) {
+        content: "\A";
+        white-space: pre;
+    }
+}
