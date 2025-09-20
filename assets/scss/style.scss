@@ -9,6 +9,7 @@
 
 // layout
 @use "./layout/container";
+@use "./layout/wrapper";
 
 // object/component
 @use "./object/component/button";
@@ -18,6 +19,7 @@
 @use "./object/project/header";
 @use "./object/project/keyVisual";
 @use "./object/project/news";
+@use "./object/project/service";
 
 // object/utility
 @use "./object/utility/lineBreak";
